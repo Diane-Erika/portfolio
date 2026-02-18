@@ -1,4 +1,4 @@
-    import { useState, useEffect, useRef, type RefObject, type ReactNode } from "react";
+    import { useState, useEffect, useRef, type RefObject, type ReactNode, type JSX } from "react";
     import girl from "../assets/girl.png";
     import bunny from "../assets/bunny.png";
     import lessons from "../assets/lessons.png";
@@ -245,7 +245,7 @@ import { toast } from "react-hot-toast";
     export default function PortfolioMain(): JSX.Element {
     const [scrolled, setScrolled] = useState<boolean>(false);
 
-    const copyToClipboard = async (text) => {
+    const copyToClipboard = async (text: string) => {
         await navigator.clipboard.writeText(text);
         toast.success("Copied to clipboard ✓");
     };

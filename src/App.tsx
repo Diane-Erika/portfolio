@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import PortfolioMain from './components/PortfolioMain'
 import { Toaster } from 'react-hot-toast'
