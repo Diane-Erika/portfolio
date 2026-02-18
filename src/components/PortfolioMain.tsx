@@ -305,13 +305,14 @@ import { toast } from "react-hot-toast";
 
         {/* ── NAVBAR ── */}
         <nav
-            className={`fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 md:px-16 py-4 transition-shadow duration-300 ${scrolled ? "shadow-md" : ""}`}
+            className={`fixed top-0 inset-x-0 z-50 flex flex-col md:flex-row md:items-center md:justify-between px-6 md:px-16 py-4 transition-shadow duration-300 ${scrolled ? "shadow-md" : ""}`}
             style={{ backgroundColor: "rgba(240,235,227,0.92)", backdropFilter: "blur(10px)", borderBottom: "1px solid rgba(0,0,0,0.07)" }}
         >
             {/* Brand pill */}
-            <div className="w-[315px] hidden md:flex items-center gap-2 bg-white border border-stone-200 rounded-full px-4 py-2 text-sm">
-                <Search className="w-4 h-4" />
-                <TypeAnimation
+            <div className="relative w-full md:w-[315px] flex items-center justify-start md:justify-start gap-2 bg-white border border-stone-200 rounded-full px-4 py-2 text-sm">
+                <Search className="w-4 h-4 absolute left-4" />
+                <div className="pl-6">
+                    <TypeAnimation
                     sequence={[
                         'Web Developer',
                         1500,
@@ -328,10 +329,11 @@ import { toast } from "react-hot-toast";
                     repeat={Infinity}
                     className="text-stone-700 font-medium"
                     />
+                </div>
             </div>
 
             {/* Nav links */}
-            <div className="flex gap-8 ml-auto">
+            <div className="flex hidden gap-8 w-315 md:w-auto md:ml-auto mt-3 md:mt-0 justify-center md:justify-end md:flex">
             {[
                 ["about", "About"],
                 ["web", "Web Projects"],
@@ -423,7 +425,7 @@ import { toast } from "react-hot-toast";
                 >
                     DE
                 </span> */}
-                <img src={gradpic} className="rounded-full w-1020 h-100" />
+                <img src={gradpic} className="rounded-full w-48 md:w-64 aspect-square object-cover" />
                 {/* </div> */}
             </div>
 
