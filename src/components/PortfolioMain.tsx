@@ -7,7 +7,7 @@
     import pos from "../assets/pos.png";
     import gradpic from "../assets/gradpic.png"
 import { TypeAnimation } from "react-type-animation";
-import { Search } from "lucide-react";
+import { Mail, Search, Smartphone } from "lucide-react";
 import { toast } from "react-hot-toast";
 
 
@@ -247,7 +247,7 @@ import { toast } from "react-hot-toast";
 
     const copyToClipboard = async (text: string) => {
         await navigator.clipboard.writeText(text);
-        toast.success("Copied to clipboard ✓");
+        toast.success("Copied to clipboard");
     };
 
     useEffect(() => {
@@ -325,6 +325,7 @@ import { toast } from "react-hot-toast";
                     wrapper="span"
                     speed={50}
                     deletionSpeed={70}
+                    repeat={Infinity}
                     className="text-stone-700 font-medium"
                     />
             </div>
@@ -432,7 +433,7 @@ import { toast } from "react-hot-toast";
                     onClick={() => copyToClipboard("+63 908 197 9745")}
                     className="flex items-center gap-2 bg-white border border-stone-200 rounded-full px-5 py-2 text-sm text-stone-700 transition-all duration-200 hover:bg-stone-50 active:scale-95"
                     >
-                    <span>📞</span>
+                    <Smartphone className="w-4 h-4" />
                     <span>+63 908 197 9745</span>
                     </button>
 
@@ -442,7 +443,7 @@ import { toast } from "react-hot-toast";
                     }
                     className="flex items-center gap-2 bg-white border border-stone-200 rounded-full px-5 py-2 text-sm text-stone-700 transition-all duration-200 hover:bg-stone-50 active:scale-95"
                     >
-                    <span>✉️</span>
+                    <Mail className="w-4 h-4" />
                     <span>kong.dianeerika@gmail.com</span>
                     </button>
             </div>
@@ -476,9 +477,9 @@ import { toast } from "react-hot-toast";
             className="py-10 text-center text-sm tracking-widest"
             style={{ backgroundColor: "#1a1a1a", color: "#999" }}
         >
-            © 2024{" "}
+            © 2025{" "}
             <span style={{ color: "#b5835a" }}>Diane Erika Kong</span>{" "}
-            · Software & Game Developer
+            · Web & Game Developer
         </footer>
         </div>
     );
