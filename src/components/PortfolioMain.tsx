@@ -186,11 +186,11 @@ import { toast } from "react-hot-toast";
         >
         {/* Thumbnail */}
         <div
-            className="rounded-2xl overflow-hidden shadow-lg aspect-video flex items-center justify-center text-6xl group"
+            className="rounded-4xl overflow-hidden aspect-video flex items-center justify-center text-6xl group"
             
         >
             <span className="transition-transform duration-300 group-hover:scale-110">
-                <img src={project.img}/>
+                <img src={project.img} className="rounded-2xl"/>
             </span>
         </div>
 
